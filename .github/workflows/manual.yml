@@ -55,7 +55,7 @@ jobs:
       run: |
         echo  ${{ secrets.certificado }} > fich.cer
         chmod 600 fich.cer
-        ssh root@${{ inputs.servidor }} -i fich.cer -c "mkdir ${{ inputs.pasta }}"
+        # ssh root@${{ inputs.servidor }} -i fich.cer -c "mkdir ${{ inputs.pasta }}"
         python ex01.py
         # ./script.sh 
       
