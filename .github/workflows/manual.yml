@@ -8,6 +8,8 @@ on:
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
+      substituir:
+        type: boolean
       regiao:
         description: 'Escolhe uma regiao'
         type: choice
