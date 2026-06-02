@@ -10,7 +10,11 @@ jobs:
   # 1. Job de Testes (Corre sempre)
   test:
     name: Executar Testes Unitários
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: [18, 20, 24]
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
